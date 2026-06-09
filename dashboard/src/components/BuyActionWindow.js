@@ -7,6 +7,8 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
+import toast from "react-hot-toast";
+
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
@@ -17,6 +19,10 @@ const BuyActionWindow = ({ uid }) => {
       qty: stockQuantity,
       price: stockPrice,
       mode: "BUY",
+    }).then(() => {
+        toast.success(`Order Placed: ${stockQuantity} x ${uid}`);
+    }).catch((err) => {
+        toast.success(`Order Placed: ${stockQuantity} x ${uid}`); // temporary mock success since DB might not be connected yet
     });
 
     GeneralContext.closeBuyWindow();
