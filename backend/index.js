@@ -7,6 +7,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 
 const apiRoutes = require("./routes/api");
+const authRoutes = require("./routes/auth");
 
 const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 app.use(morgan("dev")); // Request logging
 
 // Routes
+app.use("/api/auth", authRoutes);
 app.use("/api", apiRoutes);
 
 // For backwards compatibility with old frontend URLs (temporary until frontend is updated)
