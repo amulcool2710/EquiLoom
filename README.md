@@ -1,5 +1,7 @@
 # EquiLoom
 
+**Live Demo:** [https://equi-loom-uk5l.vercel.app](https://equi-loom-uk5l.vercel.app) | **Backend API:** [https://equiloom.onrender.com](https://equiloom.onrender.com)
+
 ![EquiLoom CI Pipeline](https://github.com/amulcool2710/EquiLoom/actions/workflows/main.yml/badge.svg)
 
 EquiLoom is a premium, modern trading platform built using the MERN stack (MongoDB, Express, React, Node.js). It features a visually stunning frontend, an interactive dashboard, and a secure backend with robust architecture.
